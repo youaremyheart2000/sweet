@@ -375,7 +375,7 @@
     
     window.seleccionarTema = async (tema) => { await setGlobalTheme(tema); await logAdminAction(currentUser.nombreCompleto, `Cambió el tema a ${tema}`); };
     window.seleccionarFondo = async (color) => { await setGlobalBackground(color); await logAdminAction(currentUser.nombreCompleto, `Cambió el color de fondo`); };
-    const themeOrnaments = { navidad: "🎅", halloween: "🎃", dia_muertos: "🏵️", san_valentin: "💖", primavera: "🌸", estandar: "" };
+    const themeOrnaments = { navidad: "🎅", halloween: "🌸", dia_muertos: "🏵️", san_valentin: "💖", primavera: "🌸", estandar: "" };
     
     subscribeToGlobalTheme((activeTheme, activeBg) => { 
       if(window.seasonalEngine) window.seasonalEngine.setTheme(activeTheme); 
